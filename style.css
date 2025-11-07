@@ -256,3 +256,31 @@ button:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #764ba2;
 }
+
+
+.sync-section {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sync-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    width: 100%;
+    max-width: 300px;
+}
+
+.download-link {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #00b894;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.download-link:hover {
+    background: #00a085;
+}
