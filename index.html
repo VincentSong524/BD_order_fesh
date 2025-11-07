@@ -1,1 +1,62 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点单系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 随机点单系统</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- 菜单管理区域 -->
+            <section class="menu-section">
+                <h2>📋 菜单管理</h2>
+                <div class="add-dish-form">
+                    <input type="text" id="dishName" placeholder="输入菜品名称">
+                    <button onclick="addDish()">添加菜品</button>
+                </div>
+                
+                <div class="menu-list" id="menuList">
+                    <!-- 菜单列表将通过JS动态生成 -->
+                </div>
+            </section>
+
+            <!-- 随机点单区域 -->
+            <section class="random-section">
+                <h2>🎲 随机点单</h2>
+                <div class="random-controls">
+                    <div class="count-selector">
+                        <label>点菜数量:</label>
+                        <input type="number" id="dishCount" min="1" value="1" max="10">
+                    </div>
+                    <button onclick="randomOrder()" class="random-btn">开始随机点单</button>
+                </div>
+                
+                <div class="result-section" id="resultSection" style="display: none;">
+                    <h3>🎯 随机结果</h3>
+                    <div class="selected-dishes" id="selectedDishes">
+                        <!-- 随机结果将通过JS动态生成 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 编辑模态框 -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>编辑菜品</h3>
+            <input type="text" id="editDishName">
+            <button onclick="updateDish()">保存</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
